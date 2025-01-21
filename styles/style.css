@@ -15,3 +15,140 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* shared styles */
+.orange{
+    color: rgba(254, 161, 1, 0.918);
+}
+.blue{
+    color: rgba(1, 173, 253, 0.884);
+}
+.green{
+    color: rgba(5, 212, 223, 0.877);
+}
+.purple{
+    color:  rgba(93, 88, 239, 0.89);
+}
+
+/* header related styles */
+.navbar , .banner{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+  .navbar i{
+    visibility: hidden;
+    position: absolute;
+}
+header hr{
+    border: 0.2px solid #fea1013b;
+    visibility: hidden;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-img{
+    display: flex;
+    gap: 11px;
+}
+.navbar-img img{
+    padding: 17px 0px 15px;
+}
+.navbar-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    margin-right: 32px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.navbar-btn button{
+    color: rgba(255, 255, 255, 0.89);
+    border: 0;
+    border-radius: 12px;
+    background-color: #FEA301;
+    padding: 15px 60px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* banner related styles */
+.banner{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.banner-title{
+    font-size: 3.50rem;
+    font-weight: bold;
+    color: #111111;
+    line-height: 61px;
+}
+.banner-description{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #111111;
+}
+.banner-btn{
+    color: rgba(255, 255, 255, 0.877);
+    background-color: #111111;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 12px;
+    padding: 15px 47px;
+}
+
+
+/* media query for small devices */
+
+@media screen and (max-width: 576px) {
+
+    /* header related styles */
+    header hr{
+        visibility: visible;
+        margin-top: -5px;
+    }
+
+     .navbar-title , .nav-links , .navbar-btn{
+        visibility: hidden;
+        position: absolute;
+     }
+     
+    .navbar i{
+        visibility: visible;
+        font-size: 26px;
+        color: rgba(0, 0, 0, 0.596);
+        margin-top: 20px;
+    } 
+    .navbar{
+        padding: 0px 36px 0 16px;
+        align-items: start;
+    }
+    .banner{
+        flex-direction: column-reverse;
+        gap: 20px;
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+        padding: 20px 16px;
+    }
+    .banner-img img{
+        width: 100%;
+        text-align: center;
+    }
+}
