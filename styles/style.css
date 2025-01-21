@@ -271,6 +271,21 @@ header hr{
     /* margin-top: 5px; */
 }
 
+.button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.cards-btn{
+    border: none;
+    border-radius: 12px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 60px;
+  
+}
+
 /* media query for small devices */
 
 @media screen and (max-width: 576px) {
@@ -365,5 +380,8 @@ header hr{
         font-size: 0.55rem;
         padding: 10px 15px;
        
+    }
+    .button{
+        padding-bottom: 40px;
     }
 }
