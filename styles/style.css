@@ -14,6 +14,23 @@
 body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+main section{
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#bgc{
+    background: url('../assets/bg.png') ,  linear-gradient(0.00deg, rgba(254, 161, 1, 0.226),rgba(255, 255, 255, 0.178) 100%);
+}
+main section > div{
+    max-width: 1160px;
+    margin: 0 auto;
+    margin-top: 60px;
 }
 
 /* shared styles */
@@ -28,6 +45,28 @@ body{
 }
 .purple{
     color:  rgba(93, 88, 239, 0.89);
+}
+
+.section-title{
+    font-size: 2.90rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.section-subtitle{
+    font-size: 1.30rem;
+    font-weight: bold;
+    color: #202020;
+    margin-top: 32px;
+    margin-bottom: 15px;
+}
+.section-description{
+    font-size: 0.95;
+    font-weight: 500;
+    color: #808080;
+    text-align: center;
+    line-height: 32px;
 }
 
 /* header related styles */
@@ -113,6 +152,124 @@ header hr{
     padding: 15px 47px;
 }
 
+/* standard cards related styles */
+
+.standard-cards{
+    display: flex;
+    gap: 28px;
+    margin: 80px 0px;
+}
+
+.card1 , .card2 , .card3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0px 0px 28px 0.94px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+}
+.card1{
+    background: linear-gradient(180.00deg, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+.card2{
+    background: linear-gradient(180.00deg, rgb(255, 244, 220),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+.card3{
+    background: linear-gradient(180.00deg, rgb(238, 225, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+
+
+.card-btn{
+    background-color: white;
+    border: 0;
+    font-weight: bold;
+    margin-top: 33px;
+}
+
+.icon i{
+    background-color: #FEA301;
+    font-size: 1.50rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: white;
+    margin: 5px;
+}
+.icon{
+    text-align: center;
+  
+}
+
+/* stories cards related styles */
+.story-container{
+    display: flex;
+    padding: 80px 0px;
+    gap: 19px;
+    
+}
+.story-card , .card{
+    border-radius: 16px;
+    background-color: white;
+}
+
+.card{
+    height: 300px;
+}
+.story-card img , .card img{
+    border-radius: 16px 16px  0px 0px;
+}
+
+.story-card > div , .card > div{
+    padding: 5px 38px;
+    position: relative;
+    top: -35px;
+}
+
+.story-cards2{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 19px;
+}
+
+.subtitle{
+    color: #000000;
+    font-size:  1.50rem;
+    font-weight: bold;
+    line-height: 38px;
+    /* margin-bottom: -5px; */
+}
+
+.card-description{
+    text-align: start;
+    max-width: 430px;
+}
+
+.story-btn , .story-card-btn1 , .story-card-btn2{
+    color: white;
+    border-radius: 47px;
+    border: 0;
+    background-color: rgb(60, 216, 232);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 15px 20px;
+   
+}
+.story-card-btn1{
+    background-color: rgb(149, 178, 38);
+}
+.story-card-btn2{
+    background-color: rgb(93, 88, 240);
+}
+
+.story-title{
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000000;
+    line-height: 28.8px;
+    max-width: 195px;
+    /* margin-top: 5px; */
+}
 
 /* media query for small devices */
 
@@ -150,5 +307,63 @@ header hr{
     .banner-img img{
         width: 100%;
         text-align: center;
+    }
+
+    /* main */
+    main section > div{
+        margin-top: 40px;
+    }
+   
+    /* cards */
+
+    .section-title{
+        font-size: 2rem;
+    }
+    .standard-cards {
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+
+    .icon{
+        visibility: hidden;
+        
+    }
+
+    /* our stories cards */
+    .story-container{
+        flex-direction: column;
+        padding: 20px 0px;
+       
+    }
+    
+    .story-cards1{
+        visibility: hidden;
+        position: absolute;
+    }
+    .story-cards2{
+        gap: 11.5px;
+    }
+    .card{
+        height: 240px; 
+        /* width: 200px;  */
+        /* overflow: hidden; */
+    }
+    .card img , .story-container img{
+        width: 100%;
+    }
+
+    .card > div{
+        top: -25px;
+    }
+    .story-title{
+        font-size: 0.55rem;
+        line-height: 17.12px;
+        max-width: 127px;
+    }
+    .story-card-btn1 , .story-card-btn2{
+        border-radius: 28.5px;
+        font-size: 0.55rem;
+        padding: 10px 15px;
+       
     }
 }
