@@ -538,7 +538,7 @@ a:hover{
         width: 100%;
     }
 
-    .card>div {
+    .card > div {
         top: -25px;
     }
 
@@ -571,5 +571,66 @@ a:hover{
     }
     .info-description {
         font-size: 1.05rem;
+    }
+}
+
+/* responsive for medium devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    
+    /* header related styles */
+    .nav-links {
+        visibility: hidden;
+        position: absolute;
+    }
+
+
+    .banner {
+        flex-direction: column-reverse;
+        gap: 20px;
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .banner-img img {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* cards */
+
+    .standard-cards {
+        flex-direction: column;
+    }
+
+
+    /* our stories cards */
+    .story-container {
+        flex-direction: column;
+        padding: 20px 0px;
+
+    }
+
+    .card {
+        height: 350px;
+        /* width: 200px;  */
+        /* overflow: hidden; */
+    }
+
+    .card img,
+    .story-card img {
+        width: 100%;
+    }
+
+    .hide{
+        visibility: visible;
+        position: relative;
+    }
+
+    /* footer */
+    .info{
+        flex-direction: column;
+        padding: 40px 20px 60px;
     }
 }
